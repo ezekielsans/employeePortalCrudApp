@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="icon" type="image/x-icon" href="/images/starks-logo.png">
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container text-center">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bd-highlight p-2 mb-3 text-white bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Stark Industries Portal</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex justify-content-end mb-2">
+                <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="/">Signout</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </nav>
+        <div class="container-fluid">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Username</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <th:block th:each="user : ${usersList}">
+                        <tr>
+
+                            <td>[[${user.first_name}]]</td>
+                            <td>[[${user.last_name}]]</td>
+                            <td>[[${user.email}]]</td>
+                            <td>[[${user.username}]]</td>
+                        </tr>
+                    </th:block>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <footer th:fragment="footer" class="sticky-bottom bd-highlight p-2 text-white text-center bg-dark">©
+            2023 Stark Industries Portal. All rights reserved.</footer>
+
+    </div>
+
+
+</body>
+
+</html>

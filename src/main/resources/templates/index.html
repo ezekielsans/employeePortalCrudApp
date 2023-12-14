@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="icon" type="image/x-icon" href="/images/starks-logo.png">
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container text-center">
+        <!-- <h1><img src="/images/starks-logo.png" width="48px" height="48px">Welcome to Starks
+            industry</h1> -->
+
+        <div>
+            <h3><a>Register now</a></h3>
+        </div>
+      
+        <div class="m-2">
+            <a th:href="@{getUsers}" class="h3">Show users</a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
